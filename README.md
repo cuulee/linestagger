@@ -6,6 +6,7 @@ Helps visualize two-way roadways represented by a oneway line. Pretty simple usa
 From there your simply using a dataframe file typed how I usually do spatial analysis, nothing crazy. Input that dataframe, into make_stagger_lines() to get a dataframe with two fields added representing the left and right roads respectively which correspond to the proper side of the road driving wise. (in NA at least) 
 
 Another function exist called make_coords_output() which takes that dataframe and makes it into an easily stylable dataframe that can be easily put into a map to see the output.
+![](https://cloud.githubusercontent.com/assets/10904982/25410200/5af727ea-29e3-11e7-9fea-b0b3ed641b03.png)
 
 # Example
 ```
@@ -33,7 +34,6 @@ mk.make_map([data,'lines'])
 ```
 
 ## Pictures
-![](https://cloud.githubusercontent.com/assets/10904982/25410200/5af727ea-29e3-11e7-9fea-b0b3ed641b03.png)
 ![](https://cloud.githubusercontent.com/assets/10904982/25410199/5af4a114-29e3-11e7-933c-01117a278206.png)
 ![](https://cloud.githubusercontent.com/assets/10904982/25410201/5af77bf0-29e3-11e7-9398-c017c6e7e17d.png)
 
