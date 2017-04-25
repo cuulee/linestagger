@@ -1,5 +1,5 @@
 # linestagger
-See pictures and example roadway visualization tool.
+Roadway visualization tool.
 
 Helps visualize two-way roadways represented by a oneway line. Pretty simple usage, either input a nlgeojson dataframe or convert to one from a geodataframe using nlgeojson. ( i.e. nl.geodf_tonldf(geodataframe), done)
 
