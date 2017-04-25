@@ -9,9 +9,9 @@ Another function exist called make_coords_output() which takes that dataframe an
 
 # Example
 ```
-import linestagger
+import linestagger 
 import pandas as pd
-import mapkit as mk
+import mapkit as mk 
 
 # reading a csv
 data = pd.read_csv('example.csv')
@@ -31,4 +31,9 @@ data = mk.make_colorkey(data,'POS')
 mk.make_map([data,'lines'])
 
 ```
+
+## Pictures
+![](https://cloud.githubusercontent.com/assets/10904982/25410200/5af727ea-29e3-11e7-9fea-b0b3ed641b03.png)
+![](https://cloud.githubusercontent.com/assets/10904982/25410199/5af4a114-29e3-11e7-933c-01117a278206.png)
+![](https://cloud.githubusercontent.com/assets/10904982/25410201/5af77bf0-29e3-11e7-9398-c017c6e7e17d.png)
 
