@@ -164,3 +164,33 @@ def make_coords_output(data):
 	data = pd.concat([data1[['gid','coords','POS']],data2[['gid','coords','POS']],data3[['gid','coords','POS']]])
 	return data
 
+# creates an aggregation data frame that can go directly into kyoto
+def make_agg_lineframe(data):
+	# getting oneway lines
+	oneway = data[data['oneway'] == 'yes']
+	oneway['LINEID'] = oneway['gid'].astype(str) + 'u'
+	oneway = oneway.drop('gid',axis=1)
+	
+	# getting all the other lines
+	data = data[data.oneway != 'yes']
+
+	# creating the output array containing the right and the left
+	data = make_stagger_lines(data,20)
+
+	# making the forward lines
+	flines = data
+	flines['coords'] = data['right-line']
+	flines['LINEID'] = flines.gid.astype(str) + 'f'
+	flines = flines.drop(['gid','right-line','left-line'],axis=1)
+
+	# making the reverse lines
+	rlines = data
+	rlines['coords'] = data['left-line']
+	rlines['LINEID'] = rlines.gid.astype(str) + 'r'
+	rlines = rlines.drop(['gid','right-line','left-line'],axis=1)
+
+	return pd.concat([oneway,flines,rlines],ignore_index=True)
+
+
+
+	
